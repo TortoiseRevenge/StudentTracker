@@ -4,7 +4,7 @@ import './Button.css';
 const Button= (props)=>{
     return(
         <div>
-            <button type={props.type || "button"} onClick={props.ClickHandler}>{props.children}</button>
+            <button value={props.value} type={props.type || "button"} onClick={props.ClickHandler}>{props.children}</button>
         </div>
     );
 };

@@ -15,10 +15,16 @@ function App() {
       return[...prevUsersList,newUser];
     })
   }
+  function deleteUserHandler(userID){
+    const userIndex = usersList.findIndex(user => user.id ===userID);
+    const updatedUsers = [...usersList];
+    updatedUsers[userIndex].active = false;
+    setUsersList(updatedUsers);
+  }
   return (
     <div>
       <AddUser onAddUser={addUserHandler}></AddUser>
-      <UserList users={usersList}></UserList>
+      <UserList deleteUser ={deleteUserHandler} users={usersList}></UserList>
     </div>
   );
 };

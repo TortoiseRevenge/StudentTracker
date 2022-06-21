@@ -4,16 +4,17 @@ import Card from "../UI/Card";
 import Button from "../UI/Button";
 
 const UserList = (props) =>{
-    function onDeleteHandler(event){
-        props.users.active = false;
+    let activeUsers = props.users.filter(user=>user.active===true);
+    function deleteHandler(event){
+        props.deleteUser(event.target.value);
     }
     return(
         <Card>
             <ul className="users">
-                {props.users.map(user =>
+                {activeUsers.map(user =>
                 <li key = {user.id}>
                     {user.name}({user.age} years old)
-                    <Button ClickHandler={onDeleteHandler}>Delete</Button>
+                    <Button value={user.id} ClickHandler={deleteHandler}>Delete</Button>
                 </li>
                 )}
             </ul>
