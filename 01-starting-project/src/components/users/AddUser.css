@@ -1,0 +1,49 @@
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+  }
+    
+  input {
+    font: inherit;
+    display: block;
+    width: 100%;
+    border: 1px solid #ccc;
+    padding: 0.15rem;
+    margin-bottom: 0.5rem;
+  }
+    
+  input:focus {
+    outline: none;
+    border-color: #4f005f;
+  }
+  Button.css
+  button {
+      font: inherit;
+      border: 1px solid #4f005f;
+      background: #4f005f;
+      color: white;
+      padding: 0.25rem 1rem;
+      cursor: pointer;
+  }
+    
+  button:hover,
+  button:active {
+      background: #741188;
+      border-color: #741188;
+  }
+    
+  button:focus {
+      outline: none;
+  }
+  Card.css
+  .card {
+      background: white;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.26);
+      border-radius: 10px;
+  
+      margin: 2rem auto;
+      padding: 1rem;
+      width: 90%;
+      max-width: 40rem;
+  }
